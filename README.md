@@ -52,7 +52,7 @@ blankfactor-automation/
 
 ### Design Patterns
 
-- **Page Object Model (POM)**: Encapsulates page elements and actions
+- **Page Object Model (POM)**: Web-page elements and actions
 - **BDD with Cucumber**: Gherkin syntax for readable test scenarios
 - **Singleton Driver Pattern**: Thread-safe driver management with `InheritableThreadLocal`
 
