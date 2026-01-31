@@ -8,8 +8,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class RetirementWealthPage extends BasePage {
 
-    private static final Logger logger = LoggerFactory.getLogger(RetirementWealthPage.class);
-
     @FindBy(xpath = "//h2[@class='h2 heading section-title  scroll-animation  fade ']")
     public WebElement poweringInnovationRetirementServicesHeader;
 
@@ -22,13 +20,16 @@ public class RetirementWealthPage extends BasePage {
     @FindBy(xpath = "//a[@title=\"Let's get started\"]")
     public WebElement letsGetStartedButton;
 
+
+    private static final Logger logger = LoggerFactory.getLogger(RetirementWealthPage.class);
+
     public void mouseHoverToAiMachineLearningFlipCard() {
         logger.debug("Hovering over AI & Machine Learning flip card");
         PageUtilities.mouseHover(aiMachineLearningFlipCard);
     }
 
     public String getAiMachineLearningFlipCardMessage() {
-        String message = PageUtilities.getText(aiMachineLearningFlipCardMessages);
+        String message = PageUtilities.getElementText(aiMachineLearningFlipCardMessages);
         logger.debug("Retrieved flip card message: {}", message);
         return message;
     }

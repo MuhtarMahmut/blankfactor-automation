@@ -24,8 +24,13 @@ public class PropertiesReader {
         }
     }
 
+    public static String getConfigProperty(String key) {
+        return properties.getProperty(key);
+    }
+
     public static String getUrl() {
         String environment = getConfigProperty("environment");
+
         if (environment != null) {
             return switch (environment.toLowerCase()) {
                 case "stg" -> getConfigProperty("stg");
@@ -39,10 +44,6 @@ public class PropertiesReader {
         }
     }
 
-    public static String getConfigProperty(String key) {
-        return properties.getProperty(key);
-    }
-
     public static String getBrowser() {
         return getConfigProperty("browser");
     }
@@ -54,7 +55,6 @@ public class PropertiesReader {
     public static boolean isHeadless() {
         return "true".equalsIgnoreCase(getConfigProperty("headless"));
     }
-
 
 
 }

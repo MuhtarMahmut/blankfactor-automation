@@ -7,11 +7,12 @@ import org.testng.annotations.DataProvider;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "stepDefinitions",
-        tags = "@a1",
         plugin = {
-            "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
-            "rerun:target/rerun.txt",
-        }
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+                "rerun:target/rerun.txt",
+        },
+        tags = "@a1",
+        dryRun = false
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 
@@ -20,4 +21,5 @@ public class TestRunner extends AbstractTestNGCucumberTests {
     public Object[][] scenarios() {
         return super.scenarios();
     }
+
 }

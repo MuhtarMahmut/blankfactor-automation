@@ -4,25 +4,23 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.ContactPage;
 import utilities.PropertiesReader;
-import utilities.DriverUtilities;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.HomePage;
 import pages.IndustriesPage;
 import pages.RetirementWealthPage;
-import utilities.PageUtilities;
 
-public class BankFactorUIAutomationSteps {
+public class ContactPageVerificationsSteps {
 
 
-    private static final Logger logger = LoggerFactory.getLogger(BankFactorUIAutomationSteps.class);
+    private static final Logger logger = LoggerFactory.getLogger(ContactPageVerificationsSteps.class);
     private HomePage homePage;
     private IndustriesPage industriesPage;
     private RetirementWealthPage retirementWealthPage;
     private ContactPage contactPage;
 
-    @Given("I am on the Blankfactor page")
+    @Given("I am on the Blankfactor home page")
     public void i_am_on_the_blankfactor_page() {
         logger.info("Navigating to Blankfactor URL");
         homePage = new HomePage();
@@ -74,12 +72,17 @@ public class BankFactorUIAutomationSteps {
         contactPage = new ContactPage();
     }
 
-    @Then("I should be on the contact page")
-    public void i_should_be_on_the_contact_page() {
-        logger.info("Verifying contact page Title & URL");
-        contactPage.verifyPageTitleEquals("Contact | Blankfactor");
-        contactPage.verifyPageUrlEquals("https://blankfactor.com/contact/");
+    @Then("I should see the correct contact page title")
+    public void i_should_see_the_correct_contact_page_title() {
+        logger.info("Verifying contact page Title");
+        contactPage.verifyContactPageTitle();
         contactPage.displayContactPageTitle();
+    }
+
+    @Then("I should see the correct contact page URL")
+    public void i_should_see_the_correct_contact_page_url() {
+        logger.info("Verifying contact page URL");
+        contactPage.verifyContactPageUrl();
         contactPage.displayContactPageUrl();
     }
 

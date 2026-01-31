@@ -44,12 +44,11 @@ public class PageUtilities {
         actions.moveToElement(element).perform();
     }
 
-    public static String getText(WebElement element) {
+    public static String getElementText(WebElement element) {
         scrollToElementIfNeeded(element);
         WaitUtilities.waitForElementToBeVisible(element);
         return element.getText();
     }
-
 
 
 }

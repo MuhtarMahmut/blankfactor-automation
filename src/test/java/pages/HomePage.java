@@ -22,4 +22,5 @@ public class HomePage extends BasePage {
         PageUtilities.click(industriesBootStrapLink);
     }
 
+
 }
