@@ -9,7 +9,7 @@ import utilities.DriverUtilities;
 public class HomePage extends BasePage {
 
     @FindBy(xpath = "//nav//a[contains(@href,'industries')]")
-    public WebElement industriesBootStrapLink;
+    public WebElement industriesPageLink;
 
 
     public void acceptCookies() {
@@ -19,7 +19,7 @@ public class HomePage extends BasePage {
     }
 
     public void goToIndustriesPage() {
-        PageUtilities.click(industriesBootStrapLink);
+        PageUtilities.click(industriesPageLink);
     }
 
 
