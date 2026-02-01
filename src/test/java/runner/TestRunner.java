@@ -7,11 +7,12 @@ import org.testng.annotations.DataProvider;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "stepDefinitions",
+        tags = "@a1",
         plugin = {
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+                "json:target/cucumber-report.json",
                 "rerun:target/rerun.txt",
         },
-        tags = "@a1",
         dryRun = false
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
