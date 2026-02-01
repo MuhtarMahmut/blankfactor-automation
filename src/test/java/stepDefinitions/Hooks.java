@@ -16,6 +16,7 @@ public class Hooks {
         DriverUtilities.getDriver();
     }
 
+
     @After
     public void tearDown(Scenario scenario) {
         if (scenario.isFailed()) {
@@ -25,5 +26,6 @@ public class Hooks {
         }
         DriverUtilities.closeDriver();
     }
+
 
 }

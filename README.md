@@ -4,49 +4,13 @@ BDD-based UI test automation framework for testing the Blankfactor website, buil
 
 ## Tech Stack
 
-- **Java 21** - Programming language
-- **Selenium WebDriver 4.39.0** - For UI automation
-- **Cucumber 7.14.0** - For writing tests in Gherkin
-- **TestNG 7.8.0** - For test execution and parallel testing
-- **Allure 2.24.0** - For test reporting and visualization
+- **Java** - Programming language
+- **Selenium WebDriver** - For UI automation
+- **Cucumber** - For writing tests in Gherkin
+- **TestNG** - For test execution and parallel testing
+- **Allure** - For test reporting and visualization
 - **Maven** - For dependency management and build tool
 - **SLF4J & Logback** - For logging framework with console output
-
-## Project Structure
-
-```
-blankfactor-automation/
-├── src/
-│   └── test/
-│       ├── java/
-│       │   ├── pages/              # Page Object Model classes
-│       │   │   ├── BasePage.java
-│       │   │   ├── HomePage.java
-│       │   │   ├── ContactPage.java
-│       │   │   ├── IndustriesPage.java
-│       │   │   └── RetirementWealthPage.java
-│       │   ├── runner/             # TestNG runners
-│       │   │   ├── TestRunner.java
-│       │   │   └── FailedTestRunner.java
-│       │   ├── stepDefinitions/    # Cucumber step definitions
-│       │   │   ├── Hooks.java
-│       │   │   └── ContactPageVerificationsSteps.java
-│       │   └── utilities/          # Utility classes
-│       │       ├── DriverUtilities.java
-│       │       ├── PageUtilities.java
-│       │       ├── WaitUtilities.java
-│       │       └── PropertiesReader.java
-│       │ 
-│       └── resources/
-│           ├── features/           # Cucumber feature files
-│           │   └── ContactPageVerifications.feature
-│           └── properties/         # Configuration files
-│               ├── Configuration.properties
-│               ├── testng.xml
-│               └── logback.xml
-├── pom.xml
-└── README.md
-```
 
 ## Key Features
 

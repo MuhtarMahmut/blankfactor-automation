@@ -17,4 +17,3 @@ Feature: Contact Page URL and Title Verifications
     Then I should see the correct contact page title
     And I should see the correct contact page URL
 
-
